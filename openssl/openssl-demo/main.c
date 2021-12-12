@@ -22,6 +22,11 @@
  * openssl enc -d -aes-128-cbc -K 000102030405060708090A0B0C0D0E0F -iv 0102030405060708 -in enc_message -nopad -nosalt -p
  *
  * 可以使用xxd看文件的二进制内容
+ *
+ * TODO 有用的链接：
+ * https://stackoverflow.com/questions/10366950/openssl-using-evp-vs-algorithm-api-for-symmetric-crypto
+ * https://www.openssl.org/docs/man3.0/man3/EVP_EncryptInit.html
+ * https://stackoverflow.com/questions/9889492/how-to-do-encryption-using-aes-in-openssl
  */
 
 #include <stdio.h>
