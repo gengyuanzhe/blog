@@ -84,6 +84,8 @@ target_include_directories(target
 
 使用 `add_library` 从源文件中创建 library，`STATIC` 表示静态链接库，名字为 `libhello_library.a`
 
+`SHARED`表示动态链接库
+
 ```cmake
 add_library(hello_library STATIC
     src/Hello.cpp
@@ -101,9 +103,9 @@ target_include_directories(hello_library
 )
 ```
 
-- PRIVATE - the directory is added to this target’s include directories
-- INTERFACE - the directory is added to the include directories for any targets that link this library.
-- PUBLIC - As above, it is included in this library and also any targets that link this library
+- PRIVATE - the directory is added to this target’s include directories. **只用于target(hello_library)的构建**
+- INTERFACE - the directory is added to the include directories for any targets that link this library. 只用于链接hello_library的其他target构建
+- PUBLIC - As above, it is included in this library and also any targets that link this library. **既用于target的构建，又用于链接target的构建**
 
 ### 5. Linking a Library
 
@@ -119,6 +121,19 @@ add_executable(hello_binary
 target_link_libraries( hello_binary
     PRIVATE
         hello_library
+)
+```
+
+### 6.  target_sources
+
+用于指定target的源文件
+
+```cmake
+add_library(my_library_shared SHARED "")
+
+target_sources(my_library_shared
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/my_library.cpp
 )
 ```
 
