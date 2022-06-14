@@ -14,7 +14,7 @@
  *
  * 4. iv的长度必须为128（16字节）
  *
- * 5. 官方简易使用EVP_*对应的函数，不要直接使用AES_*的函数。https://www.openssl.org/docs/man3.0/man3/EVP_EncryptInit.html
+ * 5. 官方建议使用EVP_*对应的函数，不要直接使用AES_*的函数。https://www.openssl.org/docs/man3.0/man3/EVP_EncryptInit.html
  *
  * 本代码相当于命令
  * openssl enc -aes-128-cbc -K 000102030405060708090A0B0C0D0E0F -iv 0102030405060708 -in in.file -out out.file -nopad -nosalt -p
