@@ -1,0 +1,152 @@
+[arthas@1570663]$ jvm
+ RUNTIME
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ MACHINE-NAME                                              1570663@FSM1
+ JVM-START-TIME                                            2022-11-12 09:56:03
+ MANAGEMENT-SPEC-VERSION                                   1.2
+ SPEC-NAME                                                 Java Virtual Machine Specification
+ SPEC-VENDOR                                               Oracle Corporation
+ SPEC-VERSION                                              1.8
+ VM-NAME                                                   OpenJDK 64-Bit Server VM
+ VM-VENDOR                                                 Huawei Technologies Co., Ltd
+ VM-VERSION                                                25.342-b07
+ INPUT-ARGUMENTS                                           -Dosc_download_cache_pool_capacity=100
+                                                           -Dosc_upload_extend_pool_capacity=19200
+                                                           -XX:+PerfDisableSharedMem
+                                                           -XX:+PrintGCDetails
+                                                           -XX:+PrintGCDateStamps
+                                                           -XX:+PrintTenuringDistribution
+                                                           -XX:+PrintHeapAtGC
+                                                           -XX:+PrintGCApplicationStoppedTime
+                                                           -XX:+PrintReferenceGC
+                                                           -XX:+PrintSafepointStatistics
+                                                           -XX:PrintSafepointStatisticsCount=1
+                                                           -Xloggc:/var/log/obs/osc/run/gc-%t.log
+                                                           -XX:+UseGCLogFileRotation
+                                                           -XX:NumberOfGCLogFiles=14
+                                                           -XX:GCLogFileSize=100M
+                                                           -XX:MaxJavaStackTraceDepth=20
+                                                           -Dfile.encoding=UTF8
+                                                           -Duser.timezone=UTC
+                                                           -Dlog4j.configfile.path=/opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty/resources/
+                                                           -DrootDir=/opt/dfv/obs_service_layer/objectwebservice/osc
+                                                           -Dcomponent=osc
+                                                           -Dlog4j2.threadContextMap=org.apache.logging.log4j.spi.GarbageFreeSortedArrayThreadContextMap
+                                                           -Dlog4j2.ThreadContext.initial.capacity=200
+                                                           -Xmx4096m
+                                                           -Xms4096m
+                                                           -Xmn2731m
+                                                           -XX:MaxDirectMemorySize=2048m
+                                                           -XX:MetaspaceSize=256m
+                                                           -XX:MaxMetaspaceSize=256m
+                                                           -XX:+UseConcMarkSweepGC
+                                                           -XX:ErrorFile=/var/log/obs/osc/run/hs_err_pid%p.log
+                                                           -XX:+DisableExplicitGC
+                                                           -XX:+CMSParallelRemarkEnabled
+                                                           -XX:+CMSScavengeBeforeRemark
+                                                           -XX:-OmitStackTraceInFastThrow
+                                                           -Xverify:none
+                                                           -XX:CMSInitiatingOccupancyFraction=60
+                                                           -Dconnections.limit=5000
+                                                           -Dflowcontrol.ports=80,443,5080,5443
+                                                           -Dtcp.rmem=131072
+                                                           -Dtcp.smem=131072
+                                                           -Dftds_enable=true
+                                                           -Dcmclient_log_path=/var/log/obs/osc/run
+                                                           -Dssl_shut_down_input_open=true
+                                                           -Dsun.net.inetaddr.ttl=3
+                                                           -Dsun.net.inetaddr.negative.ttl=0
+                                                           -DenableH11First=false
+                                                           -Dbusiness.service.type=CONVERGED
+                                                           -Dhdfs.service.type=false
+                                                           -Dfile.service.type=false
+                                                           -Dobject.service.type=true
+                                                           -Dobs.root.domain=global.myobs.com
+                                                           -Djetty.home=/opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty
+                                                           -Djetty.base=/opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty
+                                                           -Djava.io.tmpdir=/opt/jetty/osc
+                                                           -Xbootclasspath/p:lib/alpn/alpn-boot-8.1.13.v20181017.jar
+                                                           -Xbootclasspath/a:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty/lib/ext/obs-eds-client-1.0.0.jar
+ CLASS-PATH                                                /opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty/start.jar
+ BOOT-CLASS-PATH                                           lib/alpn/alpn-boot-8.1.13.v20181017.jar:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jre/lib/resources.jar:/opt/dfv/obs_service_layer/
+                                                           objectwebservice/osc/third/jre/lib/rt.jar:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jre/lib/sunrsasign.jar:/opt/dfv/obs_service_lay
+                                                           er/objectwebservice/osc/third/jre/lib/jsse.jar:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jre/lib/jce.jar:/opt/dfv/obs_service_layer
+                                                           /objectwebservice/osc/third/jre/lib/charsets.jar:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jre/lib/jfr.jar:/opt/dfv/obs_service_lay
+                                                           er/objectwebservice/osc/third/jre/classes:/opt/dfv/obs_service_layer/objectwebservice/osc/third/jetty/lib/ext/obs-eds-client-1.0.0.jar
+ LIBRARY-PATH                                              /opt/dsware/eds/eds-f/lib/:/opt/dfv/obs_service_layer/objectwebservice/osc/lib:/opt/dfv/obs_service_layer/objectwebservice/osc/lib/perfjni:/opt
+                                                           /dfv/obs_service_layer/objectwebservice/osc/third/jetty/lib/common:/opt/dfv/obs_service_layer/objectwebservice/osc/lib/qos_agent:::/usr/java/pa
+                                                           ckages/lib/aarch64:/lib:/usr/lib
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ CLASS-LOADING
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ LOADED-CLASS-COUNT                                        13316
+ TOTAL-LOADED-CLASS-COUNT                                  13579
+ UNLOADED-CLASS-COUNT                                      263
+ IS-VERBOSE                                                false
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ COMPILATION
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ NAME                                                      HotSpot 64-Bit Tiered Compilers
+ TOTAL-COMPILE-TIME                                        524042
+ [time (ms)]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GARBAGE-COLLECTORS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ParNew                                                    name : ParNew
+ [count/time (ms)]                                         collectionCount : 58869
+                                                           collectionTime : 80657129
+ ConcurrentMarkSweep                                       name : ConcurrentMarkSweep
+ [count/time (ms)]                                         collectionCount : 7
+                                                           collectionTime : 36008
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ MEMORY-MANAGERS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ CodeCacheManager                                          Code Cache
+ Metaspace Manager                                         Metaspace
+                                                           Compressed Class Space
+ ParNew                                                    Par Eden Space
+                                                           Par Survivor Space
+ ConcurrentMarkSweep                                       Par Eden Space
+                                                           Par Survivor Space
+                                                           CMS Old Gen
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ MEMORY
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ HEAP-MEMORY-USAGE                                         init : 4294967296(4.0 GiB)
+ [memory in bytes]                                         used : 2065277560(1.9 GiB)
+                                                           committed : 4008640512(3.7 GiB)
+                                                           max : 4008640512(3.7 GiB)
+ NO-HEAP-MEMORY-USAGE                                      init : 2555904(2.4 MiB)
+ [memory in bytes]                                         used : 154206072(147.1 MiB)
+                                                           committed : 175767552(167.6 MiB)
+                                                           max : 662700032(632.0 MiB)
+ PENDING-FINALIZE-COUNT                                    0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ OPERATING-SYSTEM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ OS                                                        Linux
+ ARCH                                                      aarch64
+ PROCESSORS-COUNT                                          44
+ LOAD-AVERAGE                                              33.37
+ VERSION                                                   4.19.90-vhulk2207.2.0.h1231.eulerosv2r10.aarch64
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ THREAD
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ COUNT                                                     1228
+ DAEMON-COUNT                                              104
+ PEAK-COUNT                                                1425
+ STARTED-COUNT                                             123435
+ DEADLOCK-COUNT                                            0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ FILE-DESCRIPTOR
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ MAX-FILE-DESCRIPTOR-COUNT                                 65536
+ OPEN-FILE-DESCRIPTOR-COUNT                                2256
